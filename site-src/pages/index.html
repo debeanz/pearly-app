@@ -1,0 +1,200 @@
+title: Pearly — Windows games on your iPhone
+description: Pearly runs Windows PC games on a non-jailbroken iPhone, with Wine, FEX and DXMT in one app. See which games run, reported by players, and follow its progress.
+nav: home
+---
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap">
+      <div class="hero-icon"><img src="assets/brand/icon-256.png" alt="Pearly's icon: a pearl glass pointer with a halo ring" width="132" height="132"></div>
+      <a class="kicker" href="progress.html#new-look"><span class="slot"></span><b>New</b> A new icon and a new site &rarr;</a>
+      <h1>
+        <span class="line"><span>Windows games.</span></span>
+        <span class="line"><span>On your iPhone.</span></span>
+      </h1>
+      <p class="lede">
+        Pearly runs PC games inside one iOS app. Wine stands in for Windows, FEX translates the game's x86 code
+        to ARM64 as it runs, and DXMT turns Direct3D into Metal. No jailbreak: you sideload it and let a debugger
+        switch on JIT.
+      </p>
+      <div class="cta">
+        <a class="btn btn-pearl" href="games.html">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+          See what runs
+        </a>
+        <a class="btn btn-glass" href="#how">How it works</a>
+      </div>
+      <p class="fineprint">A research project, free and open source under GPL-3.0. Not released yet: expect rough edges and per-game quirks.</p>
+
+{{include:device.html}}
+
+      <div class="hero-facts">
+        <div class="glass"><span><i class="slot"></i>Graphics</span><b>DirectX 9 and 11</b></div>
+        <div class="glass"><span><i class="slot"></i>Games</span><b>32- and 64-bit</b></div>
+        <div class="glass"><span><i class="slot"></i>Input</span><b>Touch or controller</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Live numbers ─────────────────────────────────────────────────── -->
+  <section class="section tight" style="padding-top:80px">
+    <div class="wrap">
+      <div class="numbers">
+        <div class="glass reveal" data-num="games"><b class="pearl-text">—</b><span>Games reported</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:1" data-num="reports"><b class="pearl-text">—</b><span>Reports</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:2" data-num="good"><b class="pearl-text">—</b><span>Playable or better</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:3" data-num="build"><b class="pearl-text">—</b><span>Latest build</span><small>&nbsp;</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ─────────────────────────────────────────────────── -->
+{{include:pipe.html}}
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">In the app</span>
+        <h2 class="h2 pearl-text">Built for playing, not for poking at Windows</h2>
+        <p class="section-lede">Pearly opens on your games, not on a desktop. Here's what's there once you're in.</p>
+      </div>
+{{include:features.html}}
+
+      <div class="more">
+        <div class="glass reveal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5l1.8 6.2L18 13l-6.2 1.8L10 21l-1.8-6.2L2 13l6.2-1.8z M18 3v4 M16 5h4"/></svg></i><h4>MetalFX upscaling</h4><p>DirectX 11 games can draw fewer pixels and let MetalFX scale the picture up, by as much as 2&times;.</p></div>
+        <div class="glass reveal" style="--d:1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></i><h4>DirectX 11 mode</h4><p>Many DirectX 12 games also ship a DirectX 11 mode. Pearly spots them and starts them in it, unless you switch it off.</p></div>
+        <div class="glass reveal" style="--d:2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v12H3z M8 21h8 M12 17v4 M7 9h3v3"/></svg></i><h4>Screen scaling</h4><p>Fit, Fill, Stretch or whole-number scaling, and sharp pixels for pixel-art games, in Settings or for one game.</p></div>
+        <div class="glass reveal" style="--d:3"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg></i><h4>Key bar</h4><p>Esc, Tab, Ctrl, Alt, the arrows and F1&ndash;F12 sit above the iPhone keyboard, for games that ask for them.</p></div>
+        <div class="glass reveal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg></i><h4>Your library</h4><p>Favourites, search, sorting and the hours you've played, right on the Games tab.</p></div>
+        <div class="glass reveal" style="--d:1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 6.5h9.6c2 0 3.7 1.4 4.1 3.4l1.1 5.4c.4 2.1-2 3.5-3.6 2.2l-2.3-1.9H7.9l-2.3 1.9c-1.6 1.3-4-.1-3.6-2.2l1.1-5.4c.4-2 2.1-3.4 4.1-3.4z M8 10v3 M6.5 11.5h3"/></svg></i><h4>Game Mode</h4><p>Pearly tells iOS it's a game, so the system's Game Mode can switch on while you play.</p></div>
+        <div class="glass reveal" style="--d:2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v12H4z M4 9h16 M8 13h5"/></svg></i><h4>Launchers and dialogs</h4><p>A game's launcher, setup windows and message boxes appear over the game, so you can click through them.</p></div>
+        <div class="glass reveal" style="--d:3"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l2 4-6 14L6 7z M6 7h12"/></svg></i><h4>.NET games</h4><p>Wine Mono is built in, so games written for .NET, like Celeste, start without installing anything.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Compatibility teaser ─────────────────────────────────────────── -->
+  <section class="section" id="compatibility">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Compatibility</span>
+          <h2 class="h2 pearl-text">Reported by players</h2>
+          <p class="section-lede">Every report comes from inside the app, with the build, device and settings it ran on.</p>
+        </div>
+        <a class="btn btn-glass" href="games.html">All games &rarr;</a>
+      </div>
+      <div id="recent"></div>
+    </div>
+  </section>
+
+  <!-- ── Progress ─────────────────────────────────────────────────────── -->
+  <section class="section" id="progress">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Progress</span>
+          <h2 class="h2 pearl-text">What's new</h2>
+          <p class="section-lede">Notes on what changed and why, the way emulator projects write them.</p>
+        </div>
+        <a class="btn btn-glass" href="progress.html">All progress reports &rarr;</a>
+      </div>
+      <div class="posts">
+        <a class="post-card glass reveal" href="progress.html#new-look">
+          <span class="meta"><span class="pill">New</span><time datetime="2026-10-08">Oct 8, 2026</time></span>
+          <h3>A new icon and a new site</h3>
+          <p>An icon rebuilt as layered glass, and this new site with game insights and build history.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+        <a class="post-card glass reveal" style="--d:1" href="progress.html#sharper">
+          <span class="meta"><time datetime="2026-10-05">Oct 5, 2026</time></span>
+          <h3>Sharper and steadier</h3>
+          <p>MetalFX upscaling, a DirectX 11 mode for DirectX 12 games, iOS Game Mode and settings for each game.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+        <a class="post-card glass reveal" style="--d:2" href="progress.html#controls">
+          <span class="meta"><time datetime="2026-10-04">Oct 4, 2026</time></span>
+          <h3>Controls, rebuilt</h3>
+          <p>Xbox and keyboard touch layouts, real controllers as XInput or keys, and pads that connect mid-game.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Questions ────────────────────────────────────────────────────── -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Questions</span>
+          <h2 class="h2 pearl-text">Good to know</h2>
+        </div>
+        <a class="btn btn-glass" href="faq.html">All questions &rarr;</a>
+      </div>
+      <div class="faq reveal">
+        <details class="glass">
+          <summary>Does it need a jailbreak?</summary>
+          <p>No. It's an ordinary sideloaded app. The one special requirement is JIT, which StikDebug provides by attaching as a debugger.</p>
+        </details>
+        <details class="glass">
+          <summary>Which games work?</summary>
+          <p>The <a href="games.html">compatibility list</a> has what players have reported. Direct3D 11 games are the best bet: Unity games like Untitled Goose Game run, and so do 32-bit games such as Celeste and Undertale.</p>
+        </details>
+        <details class="glass">
+          <summary>Can I download it?</summary>
+          <p>Not yet. Pearly is still a research project and isn't released. You can follow every change in the <a href="builds.html">build history</a> and the <a href="progress.html">progress reports</a>.</p>
+        </details>
+        <details class="glass">
+          <summary>Does it work on iPad?</summary>
+          <p>Yes: iPhone and iPad on iOS 17 or later. It's developed and tested mostly on recent iPhones, and newer chips run games faster.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Credits ──────────────────────────────────────────────────────── -->
+  <section class="section" id="credits">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Credits</span>
+        <h2 class="h2 pearl-text">Standing on a lot of shoulders</h2>
+      </div>
+      <div class="credits">
+        <div class="credit glass reveal">
+          <h3>Will Faust</h3>
+          <p>Pearly is built on <a href="https://github.com/willfaust">@willfaust</a>'s Madeira, whose work took iOS emulation this far.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:1">
+          <h3>32-bit games</h3>
+          <p>Support for 32-bit Windows games came from <a href="https://github.com/125hz/Madeira">125hz/Madeira</a>.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:2">
+          <h3>Built on</h3>
+          <p><a href="https://www.winehq.org/">Wine</a>, <a href="https://github.com/FEX-Emu/FEX">FEX-Emu</a> and <a href="https://github.com/3Shain/DXMT">DXMT</a>, with <a href="https://github.com/0-Blu/StikJIT">StikDebug</a> for JIT. Licensed GPL-3.0-or-later.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:3">
+          <h3>The icon</h3>
+          <p>Rendered as layered glass with <a href="https://github.com/frontedu/liquid-composer">Liquid Composer</a>, a web version of Apple's Icon Composer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="band glass reveal">
+        <img src="assets/brand/icon-256.png" alt="">
+        <div>
+          <h2 class="pearl-text">Pearly isn't out yet</h2>
+          <p>It's being built in the open. Watch the build history, read the progress reports, or look through the code.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <a class="btn btn-pearl" href="progress.html">Progress</a>
+          <a class="btn btn-glass" href="https://github.com/debeanz/Madeira-actions">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>

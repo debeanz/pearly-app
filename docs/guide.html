@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guide — Pearly</title>
+  <meta name="description" content="How Pearly works and how to get the most out of it: what it needs, the Games tab, every per-game setting, controls, graphics, reports and what doesn't run yet.">
+  <meta name="theme-color" content="#101011">
+  <meta property="og:title" content="Guide — Pearly">
+  <meta property="og:description" content="How Pearly works and how to get the most out of it: what it needs, the Games tab, every per-game setting, controls, graphics, reports and what doesn't run yet.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://debeanz.github.io/pearly-app/assets/brand/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/icon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=20261008b">
+  <script src="config.js" defer></script>
+  <script src="assets/site.js?v=20261008b" defer></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="games.html">Compatibility</a>
+      <a href="progress.html">Progress</a>
+      <a href="builds.html">Builds</a>
+      <a href="guide.html" aria-current="page">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-gh" href="https://github.com/debeanz/Madeira-actions"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+    </nav>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+      <nav class="sheet" aria-label="Main">
+          <a href="./">Home</a>
+          <a href="games.html">Compatibility</a>
+          <a href="progress.html">Progress</a>
+          <a href="builds.html">Builds</a>
+          <a href="guide.html" aria-current="page">Guide</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://github.com/debeanz/Madeira-actions">GitHub</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+  <section class="page-head" style="padding-bottom:10px">
+    <div class="wrap">
+      <span class="eyebrow reveal">Guide</span>
+      <h1 class="reveal pearl-text" style="--d:1">Using Pearly</h1>
+      <p class="section-lede reveal" style="--d:2">What it needs, what every setting does, and what to do when a game misbehaves.</p>
+    </div>
+  </section>
+
+  <div class="wrap docs">
+    <nav class="toc" aria-label="On this page">
+      <b>ON THIS PAGE</b>
+      <a href="#start">Before you start</a>
+      <a href="#library">The Games tab</a>
+      <a href="#settings">Settings for each game</a>
+      <a href="#controls">Controls</a>
+      <a href="#graphics">Graphics</a>
+      <a href="#performance">Speed and heat</a>
+      <a href="#reporting">Logs and reports</a>
+      <a href="#limits">What doesn't run yet</a>
+    </nav>
+
+    <div>
+      <section class="doc-section" id="start">
+        <h2 class="pearl-text"><span class="slot"></span>Before you start</h2>
+        <div class="prose">
+          <p>Pearly isn't released yet, so there's no download here. This is what it will need.</p>
+        </div>
+        <dl class="rows">
+          <div><dt>Device</dt><dd>An iPhone or iPad on iOS 17 or later, no jailbreak. It's developed and tested mostly on recent iPhones; newer chips run games faster.</dd></div>
+          <div><dt>JIT</dt><dd>FEX writes ARM64 code while a game runs, which iOS only allows while a debugger is attached. <a href="https://github.com/0-Blu/StikJIT">StikDebug</a> attaches one for you.</dd></div>
+          <div><dt>Installing</dt><dd>Pearly is sideloaded and signed with your Apple ID. With a free Apple ID, apps expire after 7 days and need reinstalling; your games, settings and saves stay, because the app's data survives a reinstall.</dd></div>
+          <div><dt>Games</dt><dd>Your own Windows games. Pearly ships no games, and nothing from Microsoft: Wine stands in for Windows.</dd></div>
+        </dl>
+      </section>
+
+      <section class="doc-section" id="library">
+        <h2 class="pearl-text"><span class="slot"></span>The Games tab</h2>
+        <div class="prose">
+          <p>Pearly opens on your games, shown with their Steam artwork in a row you move through like a console's.
+            Pick a game to open its card: <strong>Play</strong> starts it, and the <strong>&middot;&middot;&middot;</strong> button opens its menu
+            with its settings, controls, Save Log and Report Compatibility. Quit a game and you're back in your library.</p>
+          <ul>
+            <li>Star favourites, search, and sort your games; each card shows when you last played and for how long.</li>
+            <li>Games that start through a launcher still work: the launcher, setup windows and message boxes appear over
+              the game so you can click through them, and anything the launcher starts counts as the game.</li>
+            <li>The Desktop tab is there for poking at Windows directly; most of the time you won't need it.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="doc-section" id="settings">
+        <h2 class="pearl-text"><span class="slot"></span>Settings for each game</h2>
+        <div class="prose"><p>Every setting lives in Settings for all games, and in each game's &middot;&middot;&middot; menu for that game alone.</p></div>
+        <dl class="rows">
+          <div><dt>Override settings</dt><dd>Off: the game follows Settings. On: it keeps its own values for everything below. Changing a setting from inside a running game turns this on for you.</dd></div>
+          <div><dt>Resolution</dt><dd>The size the game renders at, passed to the game itself. Lower is faster and cooler.</dd></div>
+          <div><dt>Screen scaling</dt><dd>How the picture fills the screen: Fit, Fill, Stretch, or whole-number scaling.</dd></div>
+          <div><dt>Sharp pixels</dt><dd>Scales without smoothing, so pixel-art games stay crisp.</dd></div>
+          <div><dt>Frame rate cap</dt><dd>Holds the game to a steady rate, such as 30 or 60 fps. A steady 30 often feels better than a jumpy 45, and keeps the phone cooler.</dd></div>
+          <div><dt>MetalFX upscaling</dt><dd>DirectX 11 games only: render smaller and let MetalFX scale up, from Off to what fills your screen, at most 2&times;. It applies when the game starts.</dd></div>
+          <div><dt>DirectX 11 mode</dt><dd>Shown for DirectX 12 games that also ship a DirectX 11 path. On by default: the game starts with <code>-dx11</code>.</dd></div>
+          <div><dt>x86 memory-ordering</dt><dd>Keeps the strict memory ordering x86 games expect. On by default. Some games run faster with it Off; if a game crashes or hangs with it Off, turn it back On.</dd></div>
+          <div><dt>Controls</dt><dd>The game's touch layout and what a physical controller sends. See below.</dd></div>
+        </dl>
+      </section>
+
+      <section class="doc-section" id="controls">
+        <h2 class="pearl-text"><span class="slot"></span>Controls</h2>
+        <dl class="rows">
+          <div><dt>Touch: Off</dt><dd>No on-screen controls; for games you play with a controller or keyboard.</dd></div>
+          <div><dt>Touch: Xbox</dt><dd>An on-screen Xbox controller, which games see as a real one. New installs start here.</dd></div>
+          <div><dt>Touch: Keyboard</dt><dd>Buttons and a stick that press the keys you choose, laid out where your thumbs rest. Layouts come with presets, have an opacity slider and can be exported and imported.</dd></div>
+          <div><dt>Trackpad</dt><dd>The game picture works as a trackpad for the mouse. When a game hides its own cursor, dragging moves the camera.</dd></div>
+          <div><dt>Physical controller</dt><dd><b>XInput</b> sends it to the game as an Xbox controller. <b>Send as keyboard</b> makes each button press a key, for games without controller support. Touch controls hide while a controller is connected, and a controller that connects mid-game reaches SDL and Unreal Engine games.</dd></div>
+          <div><dt>Key bar</dt><dd>Esc, Tab, Ctrl, Alt, the arrows and F1&ndash;F12 above the iPhone keyboard.</dd></div>
+        </dl>
+      </section>
+
+      <section class="doc-section" id="graphics">
+        <h2 class="pearl-text"><span class="slot"></span>Graphics</h2>
+        <div class="prose">
+          <p>DXMT turns a game's Direct3D 11 calls into Metal, the iPhone's graphics API, and does the same for Direct3D 9 in
+            32-bit games. DirectX 12 games run when they ship a DirectX 11 mode, which Pearly starts them in automatically.
+            Shaders are cached per game, so later launches have less to convert.</p>
+        </div>
+        <div class="status-list">
+          <div class="glass"><span class="state done">Runs</span><div><b>Direct3D 11</b><p>The main path. Most reported games use it.</p></div></div>
+          <div class="glass"><span class="state done">Runs</span><div><b>Direct3D 9</b><p>For 32-bit games, such as Prince of Persia: The Two Thrones.</p></div></div>
+          <div class="glass"><span class="state part">Through DX11</span><div><b>DirectX 12</b><p>Games with a DirectX 11 mode run in it; DirectX 12-only games don't.</p></div></div>
+          <div class="glass"><span class="state next">Planned</span><div><b>OpenGL</b><p>Not yet. Bringing it in is the next big piece of work.</p></div></div>
+          <div class="glass"><span class="state no">Not yet</span><div><b>Vulkan</b><p>Games that only draw with Vulkan don't run.</p></div></div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="performance">
+        <h2 class="pearl-text"><span class="slot"></span>Speed and heat</h2>
+        <div class="prose">
+          <p>A PC game works a phone hard. How fast a game runs depends mostly on how much it asks of the GPU: Untitled Goose
+            Game holds 60 fps on an iPhone 15 Pro Max, while big 3D games are limited by the phone's graphics. If a game
+            struggles:</p>
+          <ul>
+            <li>Lower its <strong>resolution</strong>, and try <strong>MetalFX</strong> to win back sharpness.</li>
+            <li>Cap it at <strong>30 fps</strong>: steadier, and the phone stays cooler.</li>
+            <li>After a few minutes of a heavy game the phone warms up and iOS slows the chip to cool it. A lower resolution or
+              a frame cap delays that.</li>
+            <li>Try <strong>x86 memory-ordering</strong> Off, and turn it back On if the game gets unstable.</li>
+          </ul>
+          <p>Pearly never changes a game's own configuration files to make it faster; every setting here works from the outside.</p>
+        </div>
+      </section>
+
+      <section class="doc-section" id="reporting">
+        <h2 class="pearl-text"><span class="slot"></span>Logs and reports</h2>
+        <dl class="rows">
+          <div><dt>Save Log</dt><dd>In a game's &middot;&middot;&middot; menu and the in-game toolbar: keeps a dated copy of what happened, named after the game.</dd></div>
+          <div><dt>Report Compatibility</dt><dd>Pick a rating, tick any problems, give the frame rate and say what happened. The game's name, your device, iOS version, the build and the game's settings fill themselves in.</dd></div>
+          <div><dt>After a crash</dt><dd>Pearly offers to save the log or report the game right away. Quitting and reopening Pearly before the next game avoids leftovers from the crash.</dd></div>
+          <div><dt>What's public</dt><dd>Your rating, notes, device model, iOS and build versions, and the game's settings appear on the <a href="games.html">compatibility list</a>. The log goes only to the developer: it contains file paths from your phone, so it's never shown.</dd></div>
+        </dl>
+      </section>
+
+      <section class="doc-section" id="limits">
+        <h2 class="pearl-text"><span class="slot"></span>What doesn't run yet</h2>
+        <div class="prose">
+          <ul>
+            <li>Games that only use <strong>DirectX 12</strong>, <strong>OpenGL</strong> or <strong>Vulkan</strong>.</li>
+            <li>Big, recent 3D games may start but run slowly: the phone's GPU is the limit.</li>
+            <li>Per-game quirks: check a game's page on the <a href="games.html">compatibility list</a> before you copy it over,
+              and add your own report when you've played it.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+        <p>Windows games on iPhone. A free, open-source research project under GPL-3.0, built on Madeira by Will Faust.</p>
+      </div>
+      <div>
+        <h4>Games</h4>
+        <ul>
+          <li><a href="games.html">Compatibility list</a></li>
+          <li><a href="games.html#how-to-report">Report a game</a></li>
+          <li><a href="guide.html#limits">What doesn't run yet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="./#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="progress.html">Progress reports</a></li>
+          <li><a href="builds.html">Build history</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions">Source on GitHub</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions/blob/main/LICENSE">License</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>Game names and artwork belong to their owners.</span>
+      <span>&copy; <span data-year>2026</span> Pearly</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

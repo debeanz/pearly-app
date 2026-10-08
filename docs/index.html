@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pearly — Windows games on your iPhone</title>
+  <meta name="description" content="Pearly runs Windows PC games on a non-jailbroken iPhone, with Wine, FEX and DXMT in one app. See which games run, reported by players, and follow its progress.">
+  <meta name="theme-color" content="#101011">
+  <meta property="og:title" content="Pearly — Windows games on your iPhone">
+  <meta property="og:description" content="Pearly runs Windows PC games on a non-jailbroken iPhone, with Wine, FEX and DXMT in one app. See which games run, reported by players, and follow its progress.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://debeanz.github.io/pearly-app/assets/brand/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/icon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=20261008b">
+  <script src="config.js" defer></script>
+  <script src="assets/site.js?v=20261008b" defer></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="games.html">Compatibility</a>
+      <a href="progress.html">Progress</a>
+      <a href="builds.html">Builds</a>
+      <a href="guide.html">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-gh" href="https://github.com/debeanz/Madeira-actions"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+    </nav>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+      <nav class="sheet" aria-label="Main">
+          <a href="./" aria-current="page">Home</a>
+          <a href="games.html">Compatibility</a>
+          <a href="progress.html">Progress</a>
+          <a href="builds.html">Builds</a>
+          <a href="guide.html">Guide</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://github.com/debeanz/Madeira-actions">GitHub</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap">
+      <div class="hero-icon"><img src="assets/brand/icon-256.png" alt="Pearly's icon: a pearl glass pointer with a halo ring" width="132" height="132"></div>
+      <a class="kicker" href="progress.html#new-look"><span class="slot"></span><b>New</b> A new icon and a new site &rarr;</a>
+      <h1>
+        <span class="line"><span>Windows games.</span></span>
+        <span class="line"><span>On your iPhone.</span></span>
+      </h1>
+      <p class="lede">
+        Pearly runs PC games inside one iOS app. Wine stands in for Windows, FEX translates the game's x86 code
+        to ARM64 as it runs, and DXMT turns Direct3D into Metal. No jailbreak: you sideload it and let a debugger
+        switch on JIT.
+      </p>
+      <div class="cta">
+        <a class="btn btn-pearl" href="games.html">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+          See what runs
+        </a>
+        <a class="btn btn-glass" href="#how">How it works</a>
+      </div>
+      <p class="fineprint">A research project, free and open source under GPL-3.0. Not released yet: expect rough edges and per-game quirks.</p>
+
+      <div class="device-stage" aria-hidden="true">
+        <div class="device">
+          <div class="device-screen">
+            <div class="gt">
+              <div class="gt-top">
+                <b>Games</b>
+                <i class="gt-pill"><svg viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13z M15.5 15.5L20 20"/></svg></i>
+                <i class="gt-pill"><svg viewBox="0 0 24 24"><path d="M8 19V5 M4.5 8.5L8 5l3.5 3.5 M16 5v14 M12.5 15.5L16 19l3.5-3.5"/></svg></i>
+                <i class="gt-pill"><svg viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17z M12 8v8 M8 12h8"/></svg></i>
+                <i class="gt-pill"><svg viewBox="0 0 24 24"><path d="M19 12a7 7 0 1 1-2.05-4.95 M19 4.5V9h-4.5"/></svg></i>
+              </div>
+              <div class="gt-row">
+                <div class="gt-track">
+                  <figure class="gt-tile" data-title="Hollow Knight" data-steam="367520" data-fav="1"><figcaption>Hollow Knight</figcaption></figure>
+                  <figure class="gt-tile" data-title="Hades" data-steam="1145360" data-fav="1"><figcaption>Hades</figcaption></figure>
+                  <figure class="gt-tile" data-title="Red Dead Redemption 2" data-steam="1174180"><figcaption>Red Dead Redemption 2</figcaption></figure>
+                  <figure class="gt-tile" data-title="Cyberpunk 2077" data-steam="1091500"><figcaption>Cyberpunk 2077</figcaption></figure>
+                  <figure class="gt-tile" data-title="Untitled Goose Game" data-steam="837470" data-play="Untitled.exe|4 days ago|9 h"><figcaption>Untitled Goose Game</figcaption></figure>
+                  <figure class="gt-tile" data-title="Celeste" data-steam="504230" data-play="Celeste.exe|last week|21 h"><figcaption>Celeste</figcaption></figure>
+                  <figure class="gt-tile" data-title="Cuphead" data-steam="268910"><figcaption>Cuphead</figcaption></figure>
+                  <figure class="gt-tile" data-title="Enter the Gungeon" data-steam="311690"><figcaption>Enter the Gungeon</figcaption></figure>
+                </div>
+              </div>
+              <div class="gt-dim"></div>
+              <div class="gt-card">
+                <div class="gt-card-cover"></div>
+                <div class="gt-card-title"></div>
+                <div class="gt-card-details"><code></code><span></span></div>
+                <div class="gt-card-buttons">
+                  <span class="gt-play"><svg viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>Play</span>
+                  <span class="gt-more"><svg viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18.5" cy="12" r="2"/></svg></span>
+                </div>
+              </div>
+              <div class="gt-tabs">
+                <span class="on"><svg viewBox="0 0 24 24" class="solid"><path fill-rule="evenodd" d="M7.2 6.5h9.6c2 0 3.7 1.4 4.1 3.4l1.1 5.4c.4 2.1-2 3.5-3.6 2.2l-2.3-1.9H7.9l-2.3 1.9c-1.6 1.3-4-.1-3.6-2.2l1.1-5.4c.4-2 2.1-3.4 4.1-3.4z M7 9.8v1.4H5.6v1.2H7v1.4h1.2v-1.4h1.4v-1.2H8.2V9.8z M16.2 9.9a.95.95 0 1 0 0 1.9a.95.95 0 0 0 0-1.9z M18.1 11.8a.95.95 0 1 0 0 1.9a.95.95 0 0 0 0-1.9z"/></svg>Games</span>
+                <span><svg viewBox="0 0 24 24"><path d="M3.5 4.5h17v11.5h-17z M8.5 20h7 M12 16v4"/></svg>Desktop</span>
+                <span><svg viewBox="0 0 24 24" class="solid"><circle cx="12" cy="12" r="8.1" fill="none" stroke="currentColor" stroke-width="3.4" stroke-dasharray="3.2 3.16"/><path fill-rule="evenodd" d="M12 5.4a6.6 6.6 0 1 1 0 13.2a6.6 6.6 0 0 1 0-13.2z M12 9.4a2.6 2.6 0 1 0 0 5.2a2.6 2.6 0 0 0 0-5.2z"/></svg>Settings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-facts">
+        <div class="glass"><span><i class="slot"></i>Graphics</span><b>DirectX 9 and 11</b></div>
+        <div class="glass"><span><i class="slot"></i>Games</span><b>32- and 64-bit</b></div>
+        <div class="glass"><span><i class="slot"></i>Input</span><b>Touch or controller</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Live numbers ─────────────────────────────────────────────────── -->
+  <section class="section tight" style="padding-top:80px">
+    <div class="wrap">
+      <div class="numbers">
+        <div class="glass reveal" data-num="games"><b class="pearl-text">—</b><span>Games reported</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:1" data-num="reports"><b class="pearl-text">—</b><span>Reports</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:2" data-num="good"><b class="pearl-text">—</b><span>Playable or better</span><small>&nbsp;</small></div>
+        <div class="glass reveal" style="--d:3" data-num="build"><b class="pearl-text">—</b><span>Latest build</span><small>&nbsp;</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ─────────────────────────────────────────────────── -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="h2">From a Windows .exe to the iPhone's GPU</h2>
+        <p class="section-lede">
+          All of it runs inside the one app. Even Wine's server is a thread rather
+          than a separate process, because an iOS app can't start processes of its own.
+        </p>
+      </div>
+
+      <div class="pipe">
+        <div class="pipe-line"></div>
+        <div class="pipe-node reveal" style="--i:0;--d:0">
+          <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18M6.5 6.25h.01M9 6.25h.01"/></svg></div>
+          <div><span class="pipe-k">Game</span><h3>Your .exe</h3><p>The Windows build you already own — 64-bit or 32-bit.</p></div>
+        </div>
+        <div class="pipe-node reveal" style="--i:1;--d:1">
+          <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-.9 7.2A4.2 4.2 0 0 1 12 14a4.2 4.2 0 0 1-4.1-3.8z"/><path d="M12 14v6M8.5 21h7"/></svg></div>
+          <div><span class="pipe-k">Windows</span><h3>Wine</h3><p>Stands in for Windows, built for ARM64EC: files, windows, input and sound.</p></div>
+        </div>
+        <div class="pipe-node reveal" style="--i:2;--d:2">
+          <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9.5 3v3M14.5 3v3M9.5 18v3M14.5 18v3M3 9.5h3M3 14.5h3M18 9.5h3M18 14.5h3"/><path d="M10 12h4m-1.5-1.5L14 12l-1.5 1.5"/></svg></div>
+          <div><span class="pipe-k">CPU</span><h3>FEX</h3><p>Translates the game's x86 code to ARM64 as it runs, so it executes natively.</p></div>
+        </div>
+        <div class="pipe-node reveal" style="--i:3;--d:3">
+          <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
+          <div><span class="pipe-k">Graphics</span><h3>DXMT</h3><p>Turns Direct3D 11 into Metal — and Direct3D 9, for 32-bit games.</p></div>
+        </div>
+        <div class="pipe-node reveal" style="--i:4;--d:4">
+          <div class="pipe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="2.6"/><path d="M5.2 10.5v3"/></svg></div>
+          <div><span class="pipe-k">Device</span><h3>Your iPhone</h3><p>Metal draws the frame. Touch, controllers and audio flow back to the game.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">In the app</span>
+        <h2 class="h2 pearl-text">Built for playing, not for poking at Windows</h2>
+        <p class="section-lede">Pearly opens on your games, not on a desktop. Here's what's there once you're in.</p>
+      </div>
+      <div class="features">
+        <article class="feature glass reveal" style="--d:0">
+          <div class="mini app" aria-hidden="true">
+            <div class="fx fx-lib">
+              <div class="fx-top"><b>Games</b><i></i><i></i><i></i><i></i></div>
+              <div class="fx-grid"><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/837470/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/837470/header.jpg'"><span class="fx-star">&#9733;</span><figcaption>Untitled Goose Game</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg'"><figcaption>Celeste</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg'"><span class="fx-star">&#9733;</span><figcaption>Hollow Knight</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg'"><figcaption>Hades</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/268910/header.jpg'"><figcaption>Cuphead</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/311690/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/311690/header.jpg'"><figcaption>Enter the Gungeon</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/391540/header.jpg'"><figcaption>Undertale</figcaption></figure><figure><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/356400/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/356400/header.jpg'"><figcaption>Thumper</figcaption></figure></div>
+            </div>
+          </div>
+          <h3>A library, not a desktop</h3>
+          <p>Games launch from a cover grid with their Steam artwork, the way a console works. Quit one and you're back in your library.</p>
+        </article>
+
+        <article class="feature glass reveal" style="--d:1">
+          <div class="mini app" aria-hidden="true">
+            <div class="fx fx-set">
+              <div class="fx-row" style="top:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0 M16 4v4M10 10v4M18 16v4"/></svg>Override settings<span class="fx-sw"></span></div>
+              <div class="fx-hdr" style="top:35px">Display</div>
+              <div class="fx-row fx-own fx-focus" style="top:46px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4z M8 4v3M16 4v3M8 17v3M16 17v3"/></svg>Resolution<em><span class="fx-v1">1280x720</span><span class="fx-v2">1600x900</span></em></div>
+              <div class="fx-row fx-own" style="top:79px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16a8 8 0 1 1 16 0 M12 16l3-6"/></svg>Frame rate cap<em>60 fps</em></div>
+            </div>
+          </div>
+          <h3>Settings for each game</h3>
+          <p>Turn on Override settings and a game gets its own resolution, screen scaling, frame-rate cap, MetalFX upscaling and controls. Leave it off and it follows Settings.</p>
+        </article>
+
+        <article class="feature glass reveal" style="--d:2">
+          <div class="mini" aria-hidden="true">
+            <div class="fx fx-touch">
+              <div class="fx-game"><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg'"></div>
+              <span class="fx-bump l">LB</span><span class="fx-bump r">RB</span>
+              <span class="fx-stick"></span>
+              <span class="fx-touchpt"></span>
+              <span class="fx-btn y">Y</span><span class="fx-btn x">X</span><span class="fx-btn b">B</span><span class="fx-btn a">A</span>
+            </div>
+          </div>
+          <h3>Touch controls you lay out</h3>
+          <p>Put a stick and buttons where your thumbs rest, in keyboard-and-mouse or Xbox mode. The middle of the screen works as a trackpad.</p>
+        </article>
+
+        <article class="feature glass reveal" style="--d:3">
+          <div class="mini app" aria-hidden="true">
+            <div class="fx fx-pad">
+              <div class="fx-hdr" style="top:0">Physical controller</div>
+              <div class="fx-row tall fx-r1" style="top:11px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9h10a4 4 0 0 1 4 4l.5 3a2 2 0 0 1-3.4 1.6L16 16H8l-2.1 1.6A2 2 0 0 1 2.5 16L3 13a4 4 0 0 1 4-4z M8 11.5v3M6.5 13h3"/></svg><span>XInput<small>The game sees an Xbox controller.</small></span><svg class="fx-ck fx-c1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+              <div class="fx-row tall fx-r2" style="top:52px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg><span>Send as keyboard<small>Each button sends a key you choose.</small></span><svg class="fx-ck fx-c2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+              <div class="fx-hint" style="top:98px"><i>A</i> Choose <i>B</i> Close</div>
+            </div>
+          </div>
+          <h3>Controllers</h3>
+          <p>Bluetooth controllers reach games as XInput pads, or send keys for games without controller support. No pad? The on-screen one works the same way.</p>
+        </article>
+
+        <article class="feature glass reveal" style="--d:4">
+          <div class="mini app" aria-hidden="true">
+            <div class="fx fx-32">
+              <div class="fx-card">
+                <img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/391540/header.jpg'">
+                <b>Undertale</b>
+                <small><code>UNDERTALE.exe</code> &middot; Last played today &middot; Played 6 h</small>
+                <div class="fx-cbtn"><span class="fx-play"><span class="p">&#9654; Play</span><span class="r">&#9654; Resume</span></span><span class="fx-more">&middot;&middot;&middot;</span></div>
+              </div>
+              <span class="fx-note">x86 &middot; 32-bit</span>
+            </div>
+          </div>
+          <h3>32-bit games</h3>
+          <p>Older games built for 32-bit Windows run in a 4 GB address window of their own, inside the app.</p>
+        </article>
+
+        <article class="feature glass reveal" style="--d:5">
+          <div class="mini" aria-hidden="true">
+            <div class="fx fx-break">
+              <div class="fx-game"><img alt="" loading="lazy" decoding="async" src="https://shared.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg" onerror="this.onerror=null;this.src='https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg'"></div>
+              <div class="fx-tool"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z M14 6l3 3"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0 M12 17l4-5"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9h10a4 4 0 0 1 4 4l.5 3a2 2 0 0 1-3.4 1.6L16 16H8l-2.1 1.6A2 2 0 0 1 2.5 16L3 13a4 4 0 0 1 4-4z M8 11.5v3M6.5 13h3"/></svg></i><i class="dots"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></i></div>
+              <div class="fx-menu">
+                <span class="save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z M14 3v4h4 M9.5 12h6M9.5 16h6"/></svg>Save Log</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-7 18-3-7z M11 14L21 3"/></svg>Report Compatibility</span>
+                <span class="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l5 5v8l-5 5H8l-5-5V8z M9 9l6 6M15 9l-6 6"/></svg>Close Celeste</span>
+              </div>
+              <div class="fx-toast">Saved: Celeste (2026-10-05 14.05)</div>
+            </div>
+          </div>
+          <h3>When something breaks</h3>
+          <p>Save Log keeps a dated copy of what happened. Report Compatibility sends it here with your notes, so it can be fixed.</p>
+        </article>
+      </div>
+
+      <div class="more">
+        <div class="glass reveal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5l1.8 6.2L18 13l-6.2 1.8L10 21l-1.8-6.2L2 13l6.2-1.8z M18 3v4 M16 5h4"/></svg></i><h4>MetalFX upscaling</h4><p>DirectX 11 games can draw fewer pixels and let MetalFX scale the picture up, by as much as 2&times;.</p></div>
+        <div class="glass reveal" style="--d:1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></i><h4>DirectX 11 mode</h4><p>Many DirectX 12 games also ship a DirectX 11 mode. Pearly spots them and starts them in it, unless you switch it off.</p></div>
+        <div class="glass reveal" style="--d:2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v12H3z M8 21h8 M12 17v4 M7 9h3v3"/></svg></i><h4>Screen scaling</h4><p>Fit, Fill, Stretch or whole-number scaling, and sharp pixels for pixel-art games, in Settings or for one game.</p></div>
+        <div class="glass reveal" style="--d:3"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg></i><h4>Key bar</h4><p>Esc, Tab, Ctrl, Alt, the arrows and F1&ndash;F12 sit above the iPhone keyboard, for games that ask for them.</p></div>
+        <div class="glass reveal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg></i><h4>Your library</h4><p>Favourites, search, sorting and the hours you've played, right on the Games tab.</p></div>
+        <div class="glass reveal" style="--d:1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 6.5h9.6c2 0 3.7 1.4 4.1 3.4l1.1 5.4c.4 2.1-2 3.5-3.6 2.2l-2.3-1.9H7.9l-2.3 1.9c-1.6 1.3-4-.1-3.6-2.2l1.1-5.4c.4-2 2.1-3.4 4.1-3.4z M8 10v3 M6.5 11.5h3"/></svg></i><h4>Game Mode</h4><p>Pearly tells iOS it's a game, so the system's Game Mode can switch on while you play.</p></div>
+        <div class="glass reveal" style="--d:2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v12H4z M4 9h16 M8 13h5"/></svg></i><h4>Launchers and dialogs</h4><p>A game's launcher, setup windows and message boxes appear over the game, so you can click through them.</p></div>
+        <div class="glass reveal" style="--d:3"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l2 4-6 14L6 7z M6 7h12"/></svg></i><h4>.NET games</h4><p>Wine Mono is built in, so games written for .NET, like Celeste, start without installing anything.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Compatibility teaser ─────────────────────────────────────────── -->
+  <section class="section" id="compatibility">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Compatibility</span>
+          <h2 class="h2 pearl-text">Reported by players</h2>
+          <p class="section-lede">Every report comes from inside the app, with the build, device and settings it ran on.</p>
+        </div>
+        <a class="btn btn-glass" href="games.html">All games &rarr;</a>
+      </div>
+      <div id="recent"></div>
+    </div>
+  </section>
+
+  <!-- ── Progress ─────────────────────────────────────────────────────── -->
+  <section class="section" id="progress">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Progress</span>
+          <h2 class="h2 pearl-text">What's new</h2>
+          <p class="section-lede">Notes on what changed and why, the way emulator projects write them.</p>
+        </div>
+        <a class="btn btn-glass" href="progress.html">All progress reports &rarr;</a>
+      </div>
+      <div class="posts">
+        <a class="post-card glass reveal" href="progress.html#new-look">
+          <span class="meta"><span class="pill">New</span><time datetime="2026-10-08">Oct 8, 2026</time></span>
+          <h3>A new icon and a new site</h3>
+          <p>An icon rebuilt as layered glass, and this new site with game insights and build history.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+        <a class="post-card glass reveal" style="--d:1" href="progress.html#sharper">
+          <span class="meta"><time datetime="2026-10-05">Oct 5, 2026</time></span>
+          <h3>Sharper and steadier</h3>
+          <p>MetalFX upscaling, a DirectX 11 mode for DirectX 12 games, iOS Game Mode and settings for each game.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+        <a class="post-card glass reveal" style="--d:2" href="progress.html#controls">
+          <span class="meta"><time datetime="2026-10-04">Oct 4, 2026</time></span>
+          <h3>Controls, rebuilt</h3>
+          <p>Xbox and keyboard touch layouts, real controllers as XInput or keys, and pads that connect mid-game.</p>
+          <span class="more-link">Read &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Questions ────────────────────────────────────────────────────── -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <span class="eyebrow">Questions</span>
+          <h2 class="h2 pearl-text">Good to know</h2>
+        </div>
+        <a class="btn btn-glass" href="faq.html">All questions &rarr;</a>
+      </div>
+      <div class="faq reveal">
+        <details class="glass">
+          <summary>Does it need a jailbreak?</summary>
+          <p>No. It's an ordinary sideloaded app. The one special requirement is JIT, which StikDebug provides by attaching as a debugger.</p>
+        </details>
+        <details class="glass">
+          <summary>Which games work?</summary>
+          <p>The <a href="games.html">compatibility list</a> has what players have reported. Direct3D 11 games are the best bet: Unity games like Untitled Goose Game run, and so do 32-bit games such as Celeste and Undertale.</p>
+        </details>
+        <details class="glass">
+          <summary>Can I download it?</summary>
+          <p>Not yet. Pearly is still a research project and isn't released. You can follow every change in the <a href="builds.html">build history</a> and the <a href="progress.html">progress reports</a>.</p>
+        </details>
+        <details class="glass">
+          <summary>Does it work on iPad?</summary>
+          <p>Yes: iPhone and iPad on iOS 17 or later. It's developed and tested mostly on recent iPhones, and newer chips run games faster.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Credits ──────────────────────────────────────────────────────── -->
+  <section class="section" id="credits">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Credits</span>
+        <h2 class="h2 pearl-text">Standing on a lot of shoulders</h2>
+      </div>
+      <div class="credits">
+        <div class="credit glass reveal">
+          <h3>Will Faust</h3>
+          <p>Pearly is built on <a href="https://github.com/willfaust">@willfaust</a>'s Madeira, whose work took iOS emulation this far.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:1">
+          <h3>32-bit games</h3>
+          <p>Support for 32-bit Windows games came from <a href="https://github.com/125hz/Madeira">125hz/Madeira</a>.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:2">
+          <h3>Built on</h3>
+          <p><a href="https://www.winehq.org/">Wine</a>, <a href="https://github.com/FEX-Emu/FEX">FEX-Emu</a> and <a href="https://github.com/3Shain/DXMT">DXMT</a>, with <a href="https://github.com/0-Blu/StikJIT">StikDebug</a> for JIT. Licensed GPL-3.0-or-later.</p>
+        </div>
+        <div class="credit glass reveal" style="--d:3">
+          <h3>The icon</h3>
+          <p>Rendered as layered glass with <a href="https://github.com/frontedu/liquid-composer">Liquid Composer</a>, a web version of Apple's Icon Composer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="band glass reveal">
+        <img src="assets/brand/icon-256.png" alt="">
+        <div>
+          <h2 class="pearl-text">Pearly isn't out yet</h2>
+          <p>It's being built in the open. Watch the build history, read the progress reports, or look through the code.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <a class="btn btn-pearl" href="progress.html">Progress</a>
+          <a class="btn btn-glass" href="https://github.com/debeanz/Madeira-actions">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+        <p>Windows games on iPhone. A free, open-source research project under GPL-3.0, built on Madeira by Will Faust.</p>
+      </div>
+      <div>
+        <h4>Games</h4>
+        <ul>
+          <li><a href="games.html">Compatibility list</a></li>
+          <li><a href="games.html#how-to-report">Report a game</a></li>
+          <li><a href="guide.html#limits">What doesn't run yet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="./#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="progress.html">Progress reports</a></li>
+          <li><a href="builds.html">Build history</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions">Source on GitHub</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions/blob/main/LICENSE">License</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>Game names and artwork belong to their owners.</span>
+      <span>&copy; <span data-year>2026</span> Pearly</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

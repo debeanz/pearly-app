@@ -1,0 +1,33 @@
+title: Build history — Pearly
+description: Every build of Pearly, newest first: version, date and what changed, straight from the project's GitHub.
+nav: builds
+---
+  <section class="page-head">
+    <div class="wrap narrow">
+      <span class="eyebrow reveal">Builds</span>
+      <h1 class="reveal pearl-text" style="--d:1">Build history</h1>
+      <p class="section-lede reveal" style="--d:2">
+        Pearly is built on GitHub every time the app changes, and the line beside each build is the change it
+        brought. Versions are <b>major.minor.patch</b>: a huge update raises the first number, a medium one the second,
+        and a small update or hotfix the third. Reports on the compatibility list name the version they were made with,
+        so you can see when a game started working.
+      </p>
+      <div class="hero-facts" style="margin-top:30px;width:100%">
+        <div class="glass" data-num="build"><span><i class="slot"></i>Latest build</span><b>—</b><small class="muted" style="display:block;font-size:12.5px"></small></div>
+        <div class="glass"><span><i class="slot"></i>Numbering</span><b>major.minor.patch</b></div>
+        <div class="glass"><span><i class="slot"></i>Made by</span><b>GitHub Actions</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight" style="padding-top:10px">
+    <div class="wrap narrow">
+      <div class="builds" id="builds">
+        <div class="build glass skeleton"><div class="bar" style="width:70px"></div><div class="bar"></div><div class="bar short"></div></div>
+        <div class="build glass skeleton"><div class="bar" style="width:70px"></div><div class="bar"></div><div class="bar short"></div></div>
+        <div class="build glass skeleton"><div class="bar" style="width:70px"></div><div class="bar"></div><div class="bar short"></div></div>
+      </div>
+      <p style="text-align:center;margin:26px 0 0"><button class="btn btn-glass" id="more-builds" hidden>Show older builds</button></p>
+      <p class="muted" style="text-align:center;font-size:13.5px;margin-top:22px">Loaded live from <a href="https://github.com/debeanz/Madeira-actions/actions">the project's GitHub Actions</a>. Pearly isn't released yet, so builds aren't offered for download here.</p>
+    </div>
+  </section>

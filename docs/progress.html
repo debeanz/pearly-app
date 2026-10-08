@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Progress reports — Pearly</title>
+  <meta name="description" content="What changed in Pearly and why: 32-bit games, controls, MetalFX, DirectX 11 mode, compatibility reports, and a new icon and site.">
+  <meta name="theme-color" content="#101011">
+  <meta property="og:title" content="Progress reports — Pearly">
+  <meta property="og:description" content="What changed in Pearly and why: 32-bit games, controls, MetalFX, DirectX 11 mode, compatibility reports, and a new icon and site.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://debeanz.github.io/pearly-app/assets/brand/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/icon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=20261008b">
+  <script src="config.js" defer></script>
+  <script src="assets/site.js?v=20261008b" defer></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="games.html">Compatibility</a>
+      <a href="progress.html" aria-current="page">Progress</a>
+      <a href="builds.html">Builds</a>
+      <a href="guide.html">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-gh" href="https://github.com/debeanz/Madeira-actions"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+    </nav>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+      <nav class="sheet" aria-label="Main">
+          <a href="./">Home</a>
+          <a href="games.html">Compatibility</a>
+          <a href="progress.html" aria-current="page">Progress</a>
+          <a href="builds.html">Builds</a>
+          <a href="guide.html">Guide</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://github.com/debeanz/Madeira-actions">GitHub</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap narrow">
+      <span class="eyebrow reveal">Progress</span>
+      <h1 class="reveal pearl-text" style="--d:1">Progress reports</h1>
+      <p class="section-lede reveal" style="--d:2">
+        What changed, and why it matters for the games you play. For every single change, see the
+        <a href="builds.html">build history</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap narrow">
+
+    <article class="article" id="new-look">
+      <header>
+        <div class="meta"><span class="pill">New</span><time datetime="2026-10-08">October 8, 2026</time></div>
+        <h2 class="pearl-text"><a href="#new-look">A new icon and a new site</a></h2>
+      </header>
+      <div class="prose">
+        <h3>A new icon</h3>
+        <p>Pearly has a new icon: a pointer in pearl-white glass with a thin halo ring around it and a slot
+          through its tail, on a graphite tile. It was picked from dozens of designs tried right on the Home Screen, then
+          rebuilt with <a href="https://github.com/frontedu/liquid-composer">Liquid Composer</a>, a web version of Apple's
+          Icon Composer, so the ring and the pointer are real layers of iOS 26-style glass. The icon picker that helped choose
+          it has done its job and is gone from Settings; Pearly has one icon now.</p>
+        <h3>A new site</h3>
+        <p>This site was redesigned around that icon, and it does more than before:</p>
+        <ul>
+          <li>The <a href="games.html">compatibility list</a> opens with an overview: how many games have been reported, how
+            they rate, and the latest reports. You can filter 32-bit or 64-bit games, sort by best rated and switch to a list.</li>
+          <li>Each game's page adds up its reports: the frame rates people saw, the settings in Playable reports, the devices
+            it was tried on and the problems that came up.</li>
+          <li>The <a href="builds.html">build history</a> lists every build with the change it brought.</li>
+          <li>A <a href="guide.html">guide</a> explains every setting, and the <a href="faq.html">FAQ</a> grew.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="article" id="sharper">
+      <header>
+        <div class="meta"><time datetime="2026-10-05">October 4&ndash;5, 2026</time></div>
+        <h2 class="pearl-text"><a href="#sharper">Sharper and steadier: MetalFX, DirectX 11 mode and Game Mode</a></h2>
+      </header>
+      <div class="prose">
+        <h3>MetalFX upscaling</h3>
+        <p>DirectX 11 games can now render fewer pixels and let MetalFX, Apple's upscaler, fill the screen. The slider runs
+          from Off up to whatever fills your device's screen at the resolution you picked, at most 2&times;. It takes effect
+          when the game starts, and reports say when a game ran with it.</p>
+        <h3>DirectX 11 mode for DirectX 12 games</h3>
+        <p>Pearly draws with Direct3D 11 and 9, but plenty of DirectX 12 games ship a DirectX 11 path too. Pearly now looks
+          for one, including Unreal Engine games and Unity games built with the Agility SDK, and starts them with
+          <code>-dx11</code>. It's on by default and every such game has its own switch.</p>
+        <h3>Game Mode and settings per game</h3>
+        <p>Pearly now declares itself a game, so iOS can turn on Game Mode while you play. And every game's &middot;&middot;&middot; menu has an
+          <strong>Override</strong> switch: off, the game follows Settings; on, it keeps its own resolution, scaling,
+          frame-rate cap, MetalFX and controls. Changing a setting from inside a game turns it on for you.</p>
+      </div>
+    </article>
+
+    <article class="article" id="controls">
+      <header>
+        <div class="meta"><time datetime="2026-10-04">October 3&ndash;5, 2026</time></div>
+        <h2 class="pearl-text"><a href="#controls">Controls, rebuilt</a></h2>
+      </header>
+      <div class="prose">
+        <p>Controls got a full pass. Touch controls come in three kinds, <strong>Off</strong>, <strong>Xbox</strong> and
+          <strong>Keyboard</strong>, and new installs start on the Xbox layout. A game's controls now live in one Controls
+          section of its &middot;&middot;&middot; menu, next to the settings for a <strong>physical controller</strong>: send it to the game as
+          an Xbox controller (XInput), or have each button press a key you choose for games without controller support.</p>
+        <ul>
+          <li>Touch controls hide while a controller is connected, and have an opacity slider.</li>
+          <li>Keyboard layouts come with presets and can be exported and imported.</li>
+          <li>A key bar above the iPhone keyboard adds Esc, Tab, Ctrl, Alt, the arrows and F1&ndash;F12.</li>
+          <li>A controller that connects in the middle of a game now reaches SDL and Unreal Engine games.</li>
+          <li>Where the game's own cursor is hidden, the touch trackpad moves the camera instead of hitting an invisible wall.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="article" id="library">
+      <header>
+        <div class="meta"><time datetime="2026-10-04">October 4, 2026</time></div>
+        <h2 class="pearl-text"><a href="#library">A better library</a></h2>
+      </header>
+      <div class="prose">
+        <p>The Games tab learned to keep track: it shows the hours you've played each game, lets you favourite games and
+          search and sort your library. Pixel-art games got <strong>screen scaling</strong> (Fit, Fill, Stretch or
+          whole-number) and <strong>sharp pixels</strong>, in Settings or per game. A System status page shows what the app
+          is up to, and replaced the old Containers tab.</p>
+      </div>
+    </article>
+
+    <article class="article" id="reports">
+      <header>
+        <div class="meta"><time datetime="2026-10-03">October 3, 2026</time></div>
+        <h2 class="pearl-text"><a href="#reports">Report Compatibility</a></h2>
+      </header>
+      <div class="prose">
+        <p>Every game's &middot;&middot;&middot; menu, the in-game toolbar and the crash alert now have <strong>Report Compatibility</strong>. Pick
+          a rating, say what happened, and the report lands on the <a href="games.html">compatibility list</a> with the build,
+          device and settings the game ran on. The game's log goes along to the developer only: logs contain file paths
+          from your phone, so they're never shown here.</p>
+        <p>The same week, games that open a launcher or a setup window first started working: those windows now appear over
+          the game, along with the game's own message boxes.</p>
+      </div>
+    </article>
+
+    <article class="article" id="32bit">
+      <header>
+        <div class="meta"><time datetime="2026-10-03">September 11 &ndash; October 3, 2026</time><span>Celeste at 60 fps from 0.1.138</span></div>
+        <h2 class="pearl-text"><a href="#32bit">32-bit games</a></h2>
+      </header>
+      <div class="prose">
+        <p>Plenty of older games were only ever built for 32-bit Windows. Support for them came from
+          <a href="https://github.com/125hz/Madeira">125hz's fork of Madeira</a>, which runs each 32-bit game in a 4 GB
+          address window of its own inside the app. Bringing that work into this fork took most of September.</p>
+        <ul>
+          <li><strong>Celeste</strong>, a .NET game running on the bundled Wine Mono, first ran at about 33 fps; fixing how
+            Mono patches its own code got it to 60 fps in build 0.1.138.</li>
+          <li><strong>Undertale</strong>, a 32-bit GameMaker game, runs.</li>
+          <li><strong>Prince of Persia: The Two Thrones</strong> needed its launcher to pass: its install key, a second 32-bit
+            window and the way Windows hands window procedures across the 32-bit bridge. It runs at 60 fps from build 0.1.149.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="article" id="settings">
+      <header>
+        <div class="meta"><time datetime="2026-09-17">September 17, 2026</time></div>
+        <h2 class="pearl-text"><a href="#settings">Settings for each game</a></h2>
+      </header>
+      <div class="prose">
+        <p>Games got their own settings: a <strong>resolution</strong> that reaches the game itself rather than only the
+          screen, a <strong>frame-rate cap</strong>, and the <strong>x86 memory-ordering</strong> switch, which keeps the
+          strict ordering x86 games expect at some cost in speed. It's On by default; some games run faster with it Off.</p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="./"><img src="assets/brand/icon-64.png" alt="">Pearly</a>
+        <p>Windows games on iPhone. A free, open-source research project under GPL-3.0, built on Madeira by Will Faust.</p>
+      </div>
+      <div>
+        <h4>Games</h4>
+        <ul>
+          <li><a href="games.html">Compatibility list</a></li>
+          <li><a href="games.html#how-to-report">Report a game</a></li>
+          <li><a href="guide.html#limits">What doesn't run yet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="./#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="progress.html">Progress reports</a></li>
+          <li><a href="builds.html">Build history</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions">Source on GitHub</a></li>
+          <li><a href="https://github.com/debeanz/Madeira-actions/blob/main/LICENSE">License</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>Game names and artwork belong to their owners.</span>
+      <span>&copy; <span data-year>2026</span> Pearly</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
